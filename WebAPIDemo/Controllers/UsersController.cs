@@ -10,9 +10,11 @@ using System.Web.Http;
 using WebAPIDemo.Models;
 using System.Data.Entity;
 using System.Web.Http.Description;
+using System.Web.Http.Cors;
 
 namespace WebAPIDemo.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")] //啟用跨原始來源資源分享(CORS)
     public class UsersController : ApiController
     {
         /// <summary>
