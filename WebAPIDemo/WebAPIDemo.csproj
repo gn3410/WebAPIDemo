@@ -182,12 +182,17 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\MetadataModel\NoteMetadata.cs" />
     <Compile Include="Models\MetadataModel\UsersMetadata.cs" />
+    <Compile Include="Models\Note.cs">
+      <DependentUpon>WebAPIDemoModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Users.cs">
       <DependentUpon>WebAPIDemoModel.tt</DependentUpon>
     </Compile>

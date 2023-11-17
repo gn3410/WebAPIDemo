@@ -26,5 +26,6 @@ namespace WebAPIDemo.Models
         }
     
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Note> Note { get; set; }
     }
 }

@@ -11,5 +11,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Note">
+      <EntityTypeMapping TypeName="API_DemoModel.Note">
+        <MappingFragment StoreEntitySet="Note">
+          <ScalarProperty Name="NodeType" ColumnName="NodeType" />
+          <ScalarProperty Name="Context" ColumnName="Context" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
