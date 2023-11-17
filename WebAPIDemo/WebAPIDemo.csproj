@@ -188,9 +188,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\MetadataModel\NoteMetadata.cs" />
+    <Compile Include="Models\MetadataModel\NotesMetadata.cs" />
     <Compile Include="Models\MetadataModel\UsersMetadata.cs" />
-    <Compile Include="Models\Note.cs">
+    <Compile Include="Models\Notes.cs">
       <DependentUpon>WebAPIDemoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Users.cs">

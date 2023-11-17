@@ -20,7 +20,7 @@ namespace WebAPIDemo.Models
             [Display(Name = "筆記內文")]
             public string Context { get; set; }
             [Display(Name = "筆記類別")]
-            public string NodeType { get; set; }
+            public string Type { get; set; }
         }
     }
 }

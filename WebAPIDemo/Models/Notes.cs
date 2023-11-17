@@ -12,11 +12,11 @@ namespace WebAPIDemo.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Note
+    public partial class Notes
     {
-        public int NoteID { get; set; }
+        public int ID { get; set; }
         public string Title { get; set; }
         public string Context { get; set; }
-        public string NodeType { get; set; }
+        public string Type { get; set; }
     }
 }

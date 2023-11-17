@@ -18,12 +18,12 @@ namespace WebAPIDemo.Controllers
         [HttpGet]
         [Route("api/Notes")]
         [AllowAnonymous]
-        [ResponseType(typeof(IEnumerable<Note>))]
-        public async Task<IHttpActionResult> GetUsers()
+        [ResponseType(typeof(IEnumerable<Notes>))]
+        public async Task<IHttpActionResult> GetNotes()
         {
             using (API_DemoEntities db = new API_DemoEntities()) //開啟SQL連線
             {
-                IEnumerable<Note> model = await db.Note.OrderBy(m => m.NoteID).ToListAsync();
+                IEnumerable<Notes> model = await db.Notes.OrderBy(m => m.ID).ToListAsync();
                 if (model == null) return NotFound();
                 return Ok(model);
             }
@@ -32,21 +32,21 @@ namespace WebAPIDemo.Controllers
         /// <summary>
         /// 取得單一筆記資料
         /// </summary>
-        /// <param name="NoteID">筆記ID</param>
+        /// <param name="id">筆記ID</param>
         /// <returns></returns>
         /// http://localhost:60063/api/Notes?id=1
         [HttpGet]
         [Route("api/Notes")]
         [AllowAnonymous]
-        [ResponseType(typeof(Note))]
-        public async Task<IHttpActionResult> GetUser(int NoteID)
+        [ResponseType(typeof(Notes))]
+        public async Task<IHttpActionResult> GetNote(int id)
         {
             using (API_DemoEntities db = new API_DemoEntities())
             {
-                Note model = null;
+                Notes model = null;
                 try
                 {
-                    model = await db.Note.Where(m => m.NoteID == NoteID).FirstOrDefaultAsync();
+                    model = await db.Notes.Where(m => m.ID == id).FirstOrDefaultAsync();
                 }
                 catch (Exception ex)
                 {

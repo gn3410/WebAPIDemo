@@ -11,15 +11,15 @@
   </EntityType>
   <EntityContainer Name="API_DemoEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Users" EntityType="Self.Users" />
-    <EntitySet Name="Note" EntityType="API_DemoModel.Note" />
+    <EntitySet Name="Notes" EntityType="API_DemoModel.Notes" />
   </EntityContainer>
-  <EntityType Name="Note">
+  <EntityType Name="Notes">
     <Key>
-      <PropertyRef Name="NoteID" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="NoteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Context" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="NodeType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
   </EntityType>
 </Schema>
