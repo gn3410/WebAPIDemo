@@ -34,19 +34,19 @@ namespace WebAPIDemo.Controllers
         /// </summary>
         /// <param name="id">筆記ID</param>
         /// <returns></returns>
-        /// http://localhost:60063/api/Notes?id=1
+        /// http://localhost:60063/api/Notes?title=a
         [HttpGet]
         [Route("api/Notes")]
         [AllowAnonymous]
         [ResponseType(typeof(Notes))]
-        public async Task<IHttpActionResult> GetNote(int id)
+        public async Task<IHttpActionResult> GetNote(string title)
         {
             using (API_DemoEntities db = new API_DemoEntities())
             {
                 Notes model = null;
                 try
                 {
-                    model = await db.Notes.Where(m => m.ID == id).FirstOrDefaultAsync();
+                    model = await db.Notes.Where(m => m.Title.Contains(title)).FirstOrDefaultAsync();
                 }
                 catch (Exception ex)
                 {
